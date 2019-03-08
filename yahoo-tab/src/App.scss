@@ -1,0 +1,80 @@
+.App {
+  width: 708px;
+  margin: 20px auto;
+  border: 1px solid #d6d6d6;
+}
+
+.tab-list {
+  padding: 0;
+  margin: 0;
+  background-color: #f4f4f4;
+  li {
+    display: inline-block;
+    list-style: none;
+    margin: 0;
+    padding: 10px 25px;
+    &.link {
+      cursor: pointer;
+      border: 1px solid transparent;
+      border-top: 3px solid transparent;
+      &.actived {
+        color: #7300ff;
+        font-weight: 700;
+        background-color: #fff;
+        border: 1px solid #d6d6d6;
+        border-top: 3px solid #7300ff;
+        border-bottom: 1px solid #fff;
+        &:first-of-type {
+          border-left: 1px solid transparent;
+        }
+      }
+    }
+  }
+}
+
+.tab-content {
+  width: 100%;
+  display: flex;
+  padding: 10px;
+  box-sizing: border-box;
+  &> * {
+    height: 100%;
+    flex: 50%;
+  }
+  &> .left-img {
+    position: relative;
+    .title {
+      position: absolute;
+      bottom: 10px;
+      left: 10px;
+      width: calc(100% - 20px);
+      color: #fff;
+      font-size: 24px;
+
+    }
+  }
+  &> .right-list {
+    margin-left: 10px;
+    overflow: hidden;
+    &> .news {
+      &:not(:last-of-type) {
+        margin-bottom: 17px;
+      }
+      &> .title > a {
+        font-weight: bold;
+        color: #324fe1;
+        text-decoration: none;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+      &> .intro {
+        color: #5f5f5f;
+        font-size: 13px;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+      }
+    }
+  }
+}

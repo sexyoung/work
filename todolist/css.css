@@ -1,0 +1,71 @@
+.app {
+  margin: 40px auto;
+  width: 300px;
+}
+
+#list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#list li {
+  padding: 6px 0;
+}
+
+#list li:not(:last-of-type) {
+  border-bottom: 1px dashed #a36be8;
+}
+
+#list li:hover .remove {
+  display: inline-block;
+}
+
+.remove {
+  color: #f00;
+  border: none;
+  display: none;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.remove:hover {
+  color: rgb(195, 2, 81);
+}
+
+input[type=text] {
+  outline: none;
+}
+
+#form {
+  display: flex;
+}
+
+#form > * {
+  border: none;
+}
+
+#form input[type=text] {
+  flex: 1;
+  border: 1px solid #a36be8;
+  border-right: 0;
+  padding: 5px 8px;
+  font-size: 1em;
+  background-color: #ede5f7;
+}
+
+#form input[type=text]:focus {
+  background-color: #fff;
+}
+
+#form button {
+  color: #fff;
+  font-size: 1em;
+  cursor: pointer;
+  padding: 5px 10px;
+  background-color: #a36be8;
+}
+
+#form button:hover {
+  background-color: #7300ff;
+}
